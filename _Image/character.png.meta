@@ -124,14 +124,77 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 9
-      pivot: {x: 0.65245724, y: 0.35417128}
+      pivot: {x: 0.6325715, y: 0.32765675}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6fb1e0a615ad7014dafee2c75dfa445a
-      internalID: 1976971811
+      spriteID: fe97f51a77a069540b7a16f55454df81
+      internalID: -1205656415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: twitch
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eefaabd440fc4464caf834f3fb574c2c
+      internalID: 1717413937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e377c1126bb7ec44e9eef48c807f4dbf
+      internalID: 1812036478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: witch_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 112
+        width: 16
+        height: 16
+      alignment: 9
+      pivot: {x: 0.6188705, y: 0.35471344}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f1bbec9300784643896ef88a9d3782b
+      internalID: 1536935983
       vertices: []
       indices: 
       edges: []
@@ -147,7 +210,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      witch: 1976971811
+      blood: 1812036478
+      twitch: 1717413937
+      witch: -1205656415
+      witch_1: 1536935983
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

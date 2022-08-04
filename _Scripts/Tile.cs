@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class Tile : MonoBehaviour
 {
@@ -35,18 +36,26 @@ public class Tile : MonoBehaviour
     }
 
     public void spawnArmy(int index){
+        if(Armys[index].GetComponent<Army>().armyCost <= GameManager.instance.Gold ){
         cancelUI();
         _isOccupied = true;
         this.myArmy = Instantiate(Armys[index],transform.position,Quaternion.identity);
-        myArmy.transform.parent = GameObject.Find("EnemyHold").transform;
+        myArmy.transform.parent = GameObject.Find("ArmyHold").transform;
+        GameManager.instance.Gold -= Armys[index].GetComponent<Army>().armyCost;
+        }
     }
 
     public void removeArmy(){
-        _isOccupied = false;
+        myArmy.transform.DOKill();
         Destroy(this.myArmy);
+        cancelUI();
+        _isOccupied = false;
+
+        
     }
     public void UpgradeArmy(){
         this.myArmy.GetComponent<Army>().Upgrade();
+        cancelUI();
     }
     
 }
