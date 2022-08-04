@@ -40,6 +40,7 @@ public class SpawnManager : MonoBehaviour
 
     private void SpawnOneUnit()
     {
-        Instantiate(enemys[gameRound],SpawnPoint,Quaternion.identity);
+        GameObject e = Instantiate(enemys[gameRound],SpawnPoint,Quaternion.identity);
+        e.transform.parent = GameObject.Find("EnemyHold").transform;
     }
 }

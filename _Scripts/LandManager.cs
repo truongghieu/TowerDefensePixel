@@ -13,6 +13,7 @@ public class LandManager : MonoBehaviour
             for(int y = -2 ; y < 4 ; y++){
                 if(y != 0 && y != 1 ){
                 GameObject myLand = Instantiate(Land,Vector2.zero,Quaternion.identity);
+                myLand.transform.parent = this.transform;
                 myLand.transform.DOMove(new Vector3(x,y,0),1);
                 }
             }

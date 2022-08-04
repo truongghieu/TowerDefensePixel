@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.UI;
+using TMPro;
 
 public class Tile : MonoBehaviour
 {
@@ -13,16 +15,40 @@ public class Tile : MonoBehaviour
     /// Army 
     public GameObject[] Armys;
 
+    [Header("LOCAL UI")]
+    [SerializeField] private TextMeshProUGUI[]  CostText;
+    [SerializeField] private TextMeshProUGUI UpgradeCostText;
 
     void Start(){
         BuildingUI = transform.parent.Find("Canvas").transform.GetChild(0).gameObject;
         UpgradeUI = transform.parent.Find("Canvas").transform.GetChild(1).gameObject;
+        UpdateCostText();
+
     }
+
+
+
+    void UpdateCostText(){
+        for(int i = 0; i < Armys.Length ; i++){
+            CostText[i].text = Armys[i].GetComponent<Army>().armyCost.ToString() + "$";
+        }
+    }
+
+
+
     void OnMouseDown(){
         Time.timeScale = 0; 
         if(_isOccupied == false){
             BuildingUI.SetActive(true);
         }else{
+            // update text
+            int level = myArmy.GetComponent<Army>().Level;
+            if(myArmy.GetComponent<Army>().CostToNextLevel[level] == 999999){
+                UpgradeCostText.text = "MAX";
+            }else{
+            UpgradeCostText.text = myArmy.GetComponent<Army>().CostToNextLevel[level].ToString() + "$";
+            }
+            ///
             UpgradeUI.SetActive(true);
         }
     }

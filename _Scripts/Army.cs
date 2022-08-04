@@ -21,7 +21,7 @@ public class Army : MonoBehaviour
 
     [Header("LEVEL UPGRADE")]
     protected SpriteRenderer ArmySpriteRender;
-    public int Level = -1;
+    public int Level = 0;
     public int[] CostToNextLevel;
     public Sprite[] SpritesNextLevel;
     public int[] DameNextLevel;
@@ -81,12 +81,12 @@ public class Army : MonoBehaviour
         isAttack = false;
     }
     public virtual void Upgrade(){
-        if(GameManager.instance.Gold >= CostToNextLevel[Level + 1]){
-        Level += 1;
+        if(GameManager.instance.Gold >= CostToNextLevel[Level]){
         GameManager.instance.Gold -= CostToNextLevel[Level];
         ArmySpriteRender.sprite = SpritesNextLevel[Level];
         damage = DameNextLevel[Level];
         attackSpeed = AttackSpeedNextLevel[Level];
+        Level += 1;
         }
     }
 }

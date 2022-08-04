@@ -180,7 +180,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyGold: 2
-  enemyHealth: 8
+  enemyHealth: 50
+  enemyDame: 1
   endPoint: {x: 3.5, y: 0.5, z: 0}
   speed: 0.5
   enemyEffectGameobject: {fileID: 5093784818318918587}

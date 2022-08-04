@@ -4880,13 +4880,21 @@ MonoBehaviour:
   armyCost: 5
   attackSpeed: 3
   Bullet: {fileID: 350800659}
-  Level: -1
-  CostToNextLevel: 0a0000003f420f00
+  Level: 0
+  CostToNextLevel: 0f0000003200000064000000c8000000900100003f420f00
   SpritesNextLevel:
   - {fileID: 1536935983, guid: fa35e3b6b273da14aba7865399904233, type: 3}
-  DameNextLevel: 02000000
+  - {fileID: 114679081, guid: fa35e3b6b273da14aba7865399904233, type: 3}
+  - {fileID: 1394026684, guid: fa35e3b6b273da14aba7865399904233, type: 3}
+  - {fileID: 1370665651, guid: fa35e3b6b273da14aba7865399904233, type: 3}
+  - {fileID: 711313376, guid: fa35e3b6b273da14aba7865399904233, type: 3}
+  DameNextLevel: 0200000002000000020000000400000005000000
   AttackSpeedNextLevel:
   - 2
+  - 1
+  - 0.5
+  - 0.5
+  - 0.25
 --- !u!1 &4139951723233176987
 GameObject:
   m_ObjectHideFlags: 0
