@@ -6,12 +6,12 @@ public class SpawnManager : MonoBehaviour
 {
 
     [Header("SETUP ENEMY SPAWN")]
-    public GameObject[] enemys;
+    public GameObject[] Enemys;
     public Vector3 SpawnPoint;
-    public int gameRound = 0;
+    public Vector3 EndPoint;
     public float[] TimeToNextSpawn;
     public int[] NumberOfEnemyToSpawn;
-    [Range(1f,2f)]
+    [Range(2f,10f)]
     public float[] TimeEachSpawn;
 
 
@@ -24,23 +24,25 @@ public class SpawnManager : MonoBehaviour
 
 
     void StartToSpawn(){
-        for(int i = 0 ; i < enemys.Length ; i ++ ){
             StartCoroutine(Timing());
-        }
+
+        
     }
 
     IEnumerator Timing(){
+        for(int gameRound = 0 ; gameRound < Enemys.Length ; gameRound ++ ){
         yield return new WaitForSeconds(TimeToNextSpawn[gameRound]);
         for(int i= 0 ; i<  NumberOfEnemyToSpawn[gameRound];i++){
-            SpawnOneUnit();
+            SpawnOneUnit(gameRound);
             yield return new WaitForSeconds(TimeEachSpawn[gameRound]);
         }
-        gameRound += 1;
+    }
+        
     }
 
-    private void SpawnOneUnit()
+    private void SpawnOneUnit(int index)
     {
-        GameObject e = Instantiate(enemys[gameRound],SpawnPoint,Quaternion.identity);
+        GameObject e = Instantiate(Enemys[index],SpawnPoint,Quaternion.identity);
         e.transform.parent = GameObject.Find("EnemyHold").transform;
     }
 }

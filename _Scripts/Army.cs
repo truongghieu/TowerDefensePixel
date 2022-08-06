@@ -11,13 +11,13 @@ public class Army : MonoBehaviour
     public int damage = 1;
     public int armyHealth = 5;
     public int armyCost = 2; 
-    [SerializeField]private float attackSpeed = 2f;
+    [SerializeField]protected float attackSpeed = 2f;
 
 
     [Header("Others")]
     public GameObject Bullet;
-    private bool isAttack = false;
-    private ParticleSystem bulletEffect;
+    protected bool isAttack = false;
+    protected ParticleSystem bulletEffect;
 
     [Header("LEVEL UPGRADE")]
     protected SpriteRenderer ArmySpriteRender;
@@ -56,7 +56,7 @@ public class Army : MonoBehaviour
             }
         }    
     }
-    protected virtual void skill(){
+    protected virtual void skill(GameObject enemy){
 
     }
 
@@ -73,7 +73,7 @@ public class Army : MonoBehaviour
         bulletEffect.Stop();
     }
 
-    IEnumerator atackTiming(){
+    protected IEnumerator atackTiming(){
         yield return new WaitForSeconds(attackSpeed /3);
         bulletEffect.Stop();
         Bullet.transform.position = this.transform.position;

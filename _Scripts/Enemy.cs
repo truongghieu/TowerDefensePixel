@@ -12,9 +12,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] public Vector3 endPoint = new Vector3(3.5f,0.5f,0);
     public float speed = .2f;
     [Header("OTHES")]
-    [SerializeField] GameObject enemyEffectGameobject;
     [SerializeField] GameObject Blood;
-    private ParticleSystem enemyEffect;
 
     public virtual void Start(){
         Animate();
@@ -37,19 +35,19 @@ public class Enemy : MonoBehaviour
     }
 
     protected virtual void init(){
-        enemyEffect = enemyEffectGameobject.GetComponent<ParticleSystem>();
-        enemyEffect.Stop();
     }
 
     protected virtual void updateStatus(){
         if(transform.position.x > endPoint.x){
             GameManager.instance.Health -= this.enemyDame;
+            transform.DOKill();
             Destroy(gameObject);
         }
         if(enemyHealth <= 0 ){
             transform.DOKill();
             GameObject blood = Instantiate(Blood,transform.position,Quaternion.identity);
-            Destroy(blood,1f);           
+            Destroy(blood,1f);   
+            transform.DOKill();        
             Destroy(gameObject);
             GameManager.instance.Gold += this.enemyGold;
         }
@@ -69,7 +67,6 @@ public class Enemy : MonoBehaviour
         transform.DOMoveY(transform.position.y + 0.02f,0.2f).SetLoops(-1,LoopType.Restart );
     }
     protected virtual void takeDameAnimate(){
-        enemyEffect.Play();
         transform.DOScale(new Vector3(1.1f,1.1f,1),0.1f);
     }
     

@@ -37,7 +37,9 @@ public class Tile : MonoBehaviour
 
 
     void OnMouseDown(){
+        if(!GameManager.instance.isUI){
         Time.timeScale = 0; 
+        GameManager.instance.isUI = true;
         if(_isOccupied == false){
             BuildingUI.SetActive(true);
         }else{
@@ -51,9 +53,11 @@ public class Tile : MonoBehaviour
             ///
             UpgradeUI.SetActive(true);
         }
+        }
     }
     public void cancelUI(){
         Time.timeScale = 1; 
+        GameManager.instance.isUI = false;
         if(_isOccupied == false){
             BuildingUI.SetActive(false);
         }else{
@@ -62,6 +66,7 @@ public class Tile : MonoBehaviour
     }
 
     public void spawnArmy(int index){
+        GameManager.instance.isUI = false;
         if(Armys[index].GetComponent<Army>().armyCost <= GameManager.instance.Gold ){
         cancelUI();
         _isOccupied = true;
@@ -72,6 +77,7 @@ public class Tile : MonoBehaviour
     }
 
     public void removeArmy(){
+        GameManager.instance.isUI = false;
         myArmy.transform.DOKill();
         Destroy(this.myArmy);
         cancelUI();
@@ -80,6 +86,7 @@ public class Tile : MonoBehaviour
         
     }
     public void UpgradeArmy(){
+        GameManager.instance.isUI = false;
         this.myArmy.GetComponent<Army>().Upgrade();
         cancelUI();
     }

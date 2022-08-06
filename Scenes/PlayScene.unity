@@ -267,7 +267,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35a7345a708093e4a8f61dbf998bdfb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Gold: 2000
+  isUI: 0
+  Gold: 10
   Health: 10
 --- !u!4 &161650282
 Transform:
@@ -2662,8 +2663,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 298.1, y: -227}
-  m_SizeDelta: {x: 160.1644, y: 83.5738}
+  m_AnchoredPosition: {x: 315.12354, y: -227}
+  m_SizeDelta: {x: 194.2115, y: 83.5738}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1877357617
 MonoBehaviour:
@@ -3052,14 +3053,73 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8a4cb30c30ebc6488f5a4982ef7e602, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemys:
+  Enemys:
   - {fileID: 4727735529646434988, guid: 615fccac42d24214b85d0d5a0177da25, type: 3}
+  - {fileID: 4727735529646434988, guid: 615fccac42d24214b85d0d5a0177da25, type: 3}
+  - {fileID: 4727735529646434988, guid: 615fccac42d24214b85d0d5a0177da25, type: 3}
+  - {fileID: 4727735529646434988, guid: 615fccac42d24214b85d0d5a0177da25, type: 3}
+  - {fileID: 4760430696070264597, guid: edc2f4cd9eb34c044ab51113ca8f78bf, type: 3}
+  - {fileID: 4760430696070264597, guid: edc2f4cd9eb34c044ab51113ca8f78bf, type: 3}
+  - {fileID: 4760430696070264597, guid: edc2f4cd9eb34c044ab51113ca8f78bf, type: 3}
+  - {fileID: 4430348547616175768, guid: 97d1eabd062cd4f468ac77c3f56db411, type: 3}
+  - {fileID: 4430348547616175768, guid: 97d1eabd062cd4f468ac77c3f56db411, type: 3}
+  - {fileID: 4430348547616175768, guid: 97d1eabd062cd4f468ac77c3f56db411, type: 3}
+  - {fileID: 4430348547616175768, guid: 97d1eabd062cd4f468ac77c3f56db411, type: 3}
+  - {fileID: 4430348547616175768, guid: 97d1eabd062cd4f468ac77c3f56db411, type: 3}
+  - {fileID: 513063474030835238, guid: 6622b24356ec42a4a9afca0ea590a1cd, type: 3}
+  - {fileID: 513063474030835238, guid: 6622b24356ec42a4a9afca0ea590a1cd, type: 3}
+  - {fileID: 513063474030835238, guid: 6622b24356ec42a4a9afca0ea590a1cd, type: 3}
+  - {fileID: 513063474030835238, guid: 6622b24356ec42a4a9afca0ea590a1cd, type: 3}
+  - {fileID: 3887550752852947775, guid: 4ab468670fdb4b243937a22d59d5698e, type: 3}
+  - {fileID: 3887550752852947775, guid: 4ab468670fdb4b243937a22d59d5698e, type: 3}
+  - {fileID: 902814567942855290, guid: 3fe69415736598e449ed39f5ca9f7ece, type: 3}
+  - {fileID: 902814567942855290, guid: 3fe69415736598e449ed39f5ca9f7ece, type: 3}
+  - {fileID: 902814567942855290, guid: 3fe69415736598e449ed39f5ca9f7ece, type: 3}
   SpawnPoint: {x: -5, y: 0.5, z: 0}
-  gameRound: 0
+  EndPoint: {x: 0, y: 0, z: 0}
   TimeToNextSpawn:
+  - 10
   - 2
-  NumberOfEnemyToSpawn: 64000000
+  - 2
+  - 2
+  - 5
+  - 2
+  - 2
+  - 2
+  - 2
+  - 2
+  - 2
+  - 2
+  - 5
+  - 2
+  - 2
+  - 3
+  - 3
+  - 5
+  - 2
+  - 2
+  - 4
+  NumberOfEnemyToSpawn: 05000000040000000a0000003c00000002000000040000002000000002000000040000000800000010000000300000000200000008000000100000003000000008000000200000000800000040000000
   TimeEachSpawn:
+  - 4.54
+  - 3.64
+  - 2.72
+  - 2
+  - 6.06
+  - 4.85
+  - 2.66
+  - 4.41
+  - 3.57
+  - 2.54
+  - 3
+  - 2
+  - 3
+  - 3
+  - 2
+  - 2
+  - 3
+  - 4
+  - 3
   - 2
 --- !u!4 &2098727320
 Transform:
