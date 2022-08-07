@@ -94,11 +94,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b4a2b10bec76ab40b98daaec4fefb29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyGold: 5
+  enemyGold: 40
   enemyHealth: 45
-  enemyDame: 3
+  enemyDame: 35
   endPoint: {x: 3.5, y: 0.5, z: 0}
-  speed: 0.5
+  speed: 0.7
   Blood: {fileID: 942813732882888173, guid: 131eba226158a2540a1f2a8adb3f12bf, type: 3}
 --- !u!212 &7270609740351856873
 SpriteRenderer:

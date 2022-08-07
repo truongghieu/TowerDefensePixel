@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2920058108391504274}
   - component: {fileID: 5108649416595208398}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ice
-  m_TagString: Untagged
+  m_TagString: Army
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -51,6 +51,7 @@ MonoBehaviour:
   armyCost: 50
   attackSpeed: 5
   Bullet: {fileID: 7492844973071476076}
+  ArmyIsTile: {fileID: 0}
   Level: 0
   CostToNextLevel: 64000000c80000009001000020030000b0040000dc0500003f420f00
   SpritesNextLevel:
@@ -79,7 +80,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3051741283193685130}
   - component: {fileID: 1643070299965742538}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: visual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -165,7 +166,7 @@ GameObject:
   - component: {fileID: 4082428226430448874}
   - component: {fileID: 2353715190192734380}
   - component: {fileID: 3482740248560566857}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: IceBullet
   m_TagString: Bullet
   m_Icon: {fileID: 0}

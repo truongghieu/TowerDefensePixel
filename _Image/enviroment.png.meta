@@ -397,7 +397,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -405,6 +405,48 @@ TextureImporter:
       bones: []
       spriteID: 4d2098f45b4613546872d70c05292fdb
       internalID: 1063100847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ground_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8793bae5e8705a248878d2f6cb11e295
+      internalID: 1676872866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ground_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2d265b6df36460498d7f94dc8c576ba
+      internalID: 1986015819
       vertices: []
       indices: 
       edges: []
@@ -420,11 +462,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Ground_1: 1063100847
+      down: 275869513
       top: -271224637
       topleft: -1759382808
+      Ground_3: 1986015819
       effect: 1715995259
       Land: -1404833245
+      Ground_2: 1676872866
       downright: 1670994276
       dowleft: -1599300947
       End: -2115517787
@@ -433,7 +477,7 @@ TextureImporter:
       topright: -1250701054
       Ground: 929038460
       left: -1871193516
-      down: 275869513
+      Ground_1: 1063100847
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

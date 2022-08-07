@@ -9,7 +9,7 @@ public class Army : MonoBehaviour
     [Header("ARMY INFO")]
 
     public int damage = 1;
-    public int armyHealth = 5;
+    public float armyHealth = 5;
     public int armyCost = 2; 
     [SerializeField]protected float attackSpeed = 2f;
 
@@ -18,6 +18,8 @@ public class Army : MonoBehaviour
     public GameObject Bullet;
     protected bool isAttack = false;
     protected ParticleSystem bulletEffect;
+
+    [HideInInspector]public Tile ArmyIsTile;
 
     [Header("LEVEL UPGRADE")]
     protected SpriteRenderer ArmySpriteRender;
@@ -40,6 +42,14 @@ public class Army : MonoBehaviour
 
         Attack();
         
+    }
+    protected virtual void UpdateStatus(){
+
+        if(this.armyHealth <= 0 ){
+            transform.DOKill();
+            ArmyIsTile._isOccupied = false;
+
+        }
     }
     protected virtual void Attack(){
         GameObject enemy = GameObject.FindGameObjectWithTag("Enemy");

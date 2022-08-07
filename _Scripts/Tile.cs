@@ -7,7 +7,7 @@ using TMPro;
 
 public class Tile : MonoBehaviour
 {
-    private bool _isOccupied= false;
+    public bool _isOccupied= false;
     private GameObject BuildingUI,UpgradeUI;
     
     private GameObject myArmy;
@@ -71,6 +71,7 @@ public class Tile : MonoBehaviour
         cancelUI();
         _isOccupied = true;
         this.myArmy = Instantiate(Armys[index],transform.position,Quaternion.identity);
+        this.myArmy.GetComponent<Army>().ArmyIsTile = this;
         myArmy.transform.parent = GameObject.Find("ArmyHold").transform;
         GameManager.instance.Gold -= Armys[index].GetComponent<Army>().armyCost;
         }

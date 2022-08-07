@@ -94,9 +94,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b4a2b10bec76ab40b98daaec4fefb29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyGold: 1
-  enemyHealth: 3
-  enemyDame: 1
+  enemyGold: 10
+  enemyHealth: 5
+  enemyDame: 10
   endPoint: {x: 3.5, y: 0.5, z: 0}
   speed: 0.5
   Blood: {fileID: 942813732882888173, guid: 131eba226158a2540a1f2a8adb3f12bf, type: 3}

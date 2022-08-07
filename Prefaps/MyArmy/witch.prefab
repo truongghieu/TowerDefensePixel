@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 350800663}
   - component: {fileID: 350800662}
   - component: {fileID: 350800661}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: WitchBullet
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -4839,9 +4839,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3859942562532437881}
   - component: {fileID: 3859942562532437880}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: witch
-  m_TagString: Untagged
+  m_TagString: Army
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4877,11 +4877,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 1
   armyHealth: 5
-  armyCost: 5
+  armyCost: 10
   attackSpeed: 3
   Bullet: {fileID: 350800659}
+  ArmyIsTile: {fileID: 0}
   Level: 0
-  CostToNextLevel: 0f0000003200000064000000c80000009001000020030000400600003f420f00
+  CostToNextLevel: 2800000050000000a0000000400100008002000014050000d00700003f420f00
   SpritesNextLevel:
   - {fileID: 1536935983, guid: fa35e3b6b273da14aba7865399904233, type: 3}
   - {fileID: 114679081, guid: fa35e3b6b273da14aba7865399904233, type: 3}
@@ -4890,15 +4891,15 @@ MonoBehaviour:
   - {fileID: 711313376, guid: fa35e3b6b273da14aba7865399904233, type: 3}
   - {fileID: 1616890397, guid: fa35e3b6b273da14aba7865399904233, type: 3}
   - {fileID: 91737523, guid: fa35e3b6b273da14aba7865399904233, type: 3}
-  DameNextLevel: 0200000002000000020000000400000005000000080000000a000000
+  DameNextLevel: 0200000004000000050000000600000005000000080000000a000000
   AttackSpeedNextLevel:
   - 2
+  - 2
+  - 1.5
   - 1
+  - 0.7
   - 0.5
-  - 0.5
-  - 0.25
-  - 0.25
-  - 0.1
+  - 0.2
 --- !u!1 &4139951723233176987
 GameObject:
   m_ObjectHideFlags: 0
@@ -4909,7 +4910,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5419179753325537103}
   - component: {fileID: 1412304446673181748}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: visual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
