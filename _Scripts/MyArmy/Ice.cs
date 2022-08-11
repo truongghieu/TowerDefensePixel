@@ -17,7 +17,7 @@ public class Ice : Army
     }
     protected override void skill(GameObject enemy)
     {
-        if(!skilled && currentTargetEnemy != null){
+        if(!skilled &&  currentTargetEnemy != null){
         slowDecrease = (float)(Level + 1) / 10;
         float sp = currentTargetEnemy.GetComponent<Enemy>().speed;
         currentTargetEnemy.GetComponent<Enemy>().speed = Mathf.Max(0,sp - slowDecrease);

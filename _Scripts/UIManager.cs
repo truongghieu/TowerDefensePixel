@@ -7,23 +7,21 @@ public class UIManager : MonoBehaviour
     
  
     [SerializeField] private TextMeshProUGUI goldText;
-    [SerializeField] private Image HealthBar;
-    private int MaxHealth;
+    [SerializeField] private TextMeshProUGUI healthText;
+   
 
-    void Start(){
-        MaxHealth = GameManager.instance.Health;
-    }
+    
+  
     void Update()
     {
         updateText();
-        UpdateSlider();
+    
     }
 
 
     void updateText(){
         goldText.text = GameManager.instance.Gold.ToString()+"$";
+        healthText.text = GameManager.instance.Health.ToString() + "♥";
     }
-    void UpdateSlider(){
-        HealthBar.fillAmount = (float)GameManager.instance.Health / MaxHealth ;
-    }
+    
 }
